@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex101 Clone</title>
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        center {
+            text-align: center;
+        }
+        h1 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #27ae60;
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <h1>Regex Clone</h1>
+        <p><b>Input Details:</b></p>
+        <p>
+            <b>Regex:</b> {{r}} <br>
+            <b>String:</b> {{s}}
+        </p>
+        {% if match|length %}
+            <h2>Match found</h2>
+            <p><b>Total number of string matches: {{count}}</b></p>
+        {% else %}
+            <h2>Match not found</h2>
+        {% endif %}
+    </center>
+
+</body>
+</html>
